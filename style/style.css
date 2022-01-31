@@ -1,24 +1,25 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 :root{
 
     --color-head_foot : #444854;
     --color-famur: #78B928;
     --color-dark-famur: rgb(85,107,47);
     --color-button-hover: #d1ecaf;
+}
 
-}
-*{
-     font-family: Arial, Helvetica, sans-serif;
-}
 body{
-    background-color: black;    
+    background-color: black;
 }
 
 .header {
     height: 80px;
     width: 100%;
     background-color: var(--color-head_foot);
-
 }
+
 .footer{
     position: fixed;
     width: 100%;
@@ -32,10 +33,11 @@ body{
 }
 
 .calendar{    
-   position: relative;
-   margin: auto;   
-   width:1000px;
-   background-color: #E0E0E0;  
+    position: relative;
+    margin: auto;   
+    width:1000px;
+    background-color: #E0E0E0;  
+    outline: solid 1px orange;
 }
 
 .calendar__navi{
@@ -47,6 +49,9 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*  background-color: var(--color-famur);
+    box-shadow: 3px 3px 3px var(--color-dark-famur);
+    border-radius: 5px;*/
 }
 
 .calendar__navi-months-bar {
@@ -59,7 +64,6 @@ body{
     margin: 0 auto;    
     width: 700px;      
     display: flex;
-      
 }
 
 .calendar__days-bar-item {
@@ -81,7 +85,9 @@ body{
     width: 700px;    
     display: flex;
     flex-wrap: wrap;   
+    background-color: #F9F9F9;    
     border-radius: 5px;   
+    outline: solid 1px orange;
 }
 
 .calendar__page-item
@@ -102,7 +108,7 @@ body{
 
 .calendar__page-item:hover{
     background-color: #589908;
-}
+    }
 
 .calendar__page-item>p{
     line-height: 37px;
@@ -115,7 +121,6 @@ body{
     color: var(--color-head_foot);
     font-weight: bold;
     font-size: 25px;
-  
 }
 
 .calendar__modal{
@@ -124,28 +129,28 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 400px;
-    height: 400px;
+    /*  height: 400px;*/
     background-color: var(--color-famur);
     display: none;
     border-radius: 5px;
     border: solid 1px lightgrey;
     box-shadow: 0 0 15px 15px rgb(85,107,47);
     display:none;
+    min-height: 400px;
+    max-height: 670px;
+    flex-direction: column;
+    overflow: hidden;    
 }
 .calendar__modal-input{
-    
     border: none;    
     color: var(--color-famur);
-    height: 30px;
     width: 150px;
     margin-left: 110px;  
     background-color: var(--color-dark-famur);
     margin-bottom: 15px;
     border-radius: 3px;
     text-align: center;
-    font-size: 20px;
 }
-
 
 .calendar__modal-day-field{
     margin: 30px 0;
@@ -158,14 +163,11 @@ body{
 }
 
 .calendar__modal-list{
-    
     list-style: none;
     margin: 20px;
 }
 
 .calendar__modal-list-item{
-   
-    
     font-size: 25px;
     line-height: 25px;
     border-bottom: solid 1px var(--color-dark-famur);
@@ -180,10 +182,9 @@ body{
 }
 
 .btn{
-   border:none;   
-   background-color: transparent;   
-   color: var(--color-dark-famur) ; 
-   
+    border:none;   
+    background-color: transparent;   
+    color: var(--color-dark-famur) ; 
 }
 
 .btn--nav{
